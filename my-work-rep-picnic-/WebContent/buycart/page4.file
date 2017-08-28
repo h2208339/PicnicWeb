@@ -1,0 +1,22 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="Big5"%>
+
+<ul class="pagination">
+ 
+  <%if (rowsPerPage1<rowNumber1) {%>
+    <%if(pageIndex1>=rowsPerPage1){%>
+         <li><A href="<%=request.getRequestURI()%>?whichPage1=<%=whichPage1-1%>">&laquo;</A></li>
+       <%}%>
+       <%if ( pageNumber1 > 1) {%>
+             <%for (int i=1; i<=pageNumber1; i++){%>
+        <li> <a href="<%=request.getRequestURI()%>?whichPage1=<%=i%>"><%=i%></a></li>
+     <%}%>   
+       <%}%>
+    <%if(pageIndex1<pageIndexArray1[pageNumber1-1]){%>
+        <li><A href="<%=request.getRequestURI()%>?whichPage1=<%=whichPage1+1%>">&raquo;</A></li>
+    <%}%>
+  <%}%>  
+</ul>   
+
+
+
+
